@@ -13,7 +13,7 @@ public class PetList extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    ArrayList<String> names;
+    ArrayList<Pet> pets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +22,18 @@ public class PetList extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
 
-        names = new ArrayList<>();
+        pets = new ArrayList<>();
 
         for(int i = 0; i < 10; i++){
-            names.add("Name" + i);
+            Pet pet = new Pet("Beagle " + i, "Dog", "@drawable/beagle.jpg",
+                    "10 years", "40pounds", "c1", "c2",
+                    "c3", 1, 2, 3);
+            pets.add(pet);
         }
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new PetAdapter(names);
+        adapter = new PetAdapter(pets);
         recyclerView.setAdapter(adapter);
     }
 }

@@ -12,10 +12,10 @@ import java.util.ArrayList;
 
 class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAdapter.ViewHolder> {
 
-    ArrayList<String> names;
+    ArrayList<Pet> pets;
 
-    public PetAdapter(ArrayList<String> names){
-        this.names = names;
+    public PetAdapter(ArrayList<Pet> pets){
+        this.pets = pets;
     }
     @NonNull
     @Override
@@ -26,12 +26,12 @@ class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAd
 
     @Override
     public void onBindViewHolder(@NonNull PetAdapter.ViewHolder holder, int position) {
-        holder.petName.setText(names.get(position));
+        holder.petName.setText(pets.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return names.size();
+        return pets.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
