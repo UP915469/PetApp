@@ -1,7 +1,67 @@
 package com.example.petapp;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Pet {
+    @PrimaryKey(autoGenerate = true)
     private int id;
+
+    @ColumnInfo(name = "name")
+    private String name;
+
+    @ColumnInfo(name = "species")
+    private String species;
+
+    @ColumnInfo(name = "img_path")
+    private String imgPath;
+
+    // Care Details
+
+    @ColumnInfo(name = "avg_age")
+    private String avgAge;
+
+    @ColumnInfo(name = "avg_weight")
+    private String avgWeight;
+
+    @ColumnInfo(name = "care_comment_1")
+    private String careComment1;
+
+    @ColumnInfo(name = "care_comment_2")
+    private String careComment2;
+
+    @ColumnInfo(name = "care_comment_3")
+    private String careComment3;
+
+    //Nutrition link
+
+    @ColumnInfo(name = "food_id_1")
+    private int food1Id;
+
+    @ColumnInfo(name = "food_id_2")
+    private int food2Id;
+
+    @ColumnInfo(name = "food_id_3")
+    private int food3Id;
+
+    //Pet Constructor
+    public Pet(String name, String species, String imgPath, String avgAge, String avgWeight, String careComment1, String careComment2, String careComment3, int food1Id, int food2Id, int food3Id ){
+        this.name = name;
+        this.species = species;
+        this.imgPath = imgPath;
+        this.avgAge = avgAge;
+        this.avgWeight = avgWeight;
+        this.careComment1 = careComment1;
+        this.careComment2 = careComment2;
+        this.careComment3 = careComment3;
+        this.food1Id = food1Id;
+        this.food2Id = food2Id;
+        this.food3Id = food3Id;
+    }
+
+    // getters & setters
 
     public int getId() {
         return id;
@@ -96,37 +156,6 @@ public class Pet {
     }
 
     public void setFood3Id(int food3Id) {
-        this.food3Id = food3Id;
-    }
-
-    private String name;
-    private String species;
-    private String imgPath;
-
-    // Care Details
-    private String avgAge;
-    private String avgWeight;
-    private String careComment1;
-    private String careComment2;
-    private String careComment3;
-
-    //Nutrition link
-    private int food1Id;
-    private int food2Id;
-    private int food3Id;
-
-    //Pet Constructor
-    public Pet(String name, String species, String imgPath, String avgAge, String avgWeight, String careComment1, String careComment2, String careComment3, int food1Id, int food2Id, int food3Id ){
-        this.name = name;
-        this.species = species;
-        this.imgPath = imgPath;
-        this.avgAge = avgAge;
-        this.avgWeight = avgWeight;
-        this.careComment1 = careComment1;
-        this.careComment2 = careComment2;
-        this.careComment3 = careComment3;
-        this.food1Id = food1Id;
-        this.food2Id = food2Id;
         this.food3Id = food3Id;
     }
 }
