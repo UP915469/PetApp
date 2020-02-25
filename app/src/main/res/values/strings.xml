@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PetApp</string>
+
+    <string name="pet_img">Pet Img</string>
+    <string name="pet_name">Pet Name</string>
+    <string name="care_tips">Care Tips</string>
 </resources>
