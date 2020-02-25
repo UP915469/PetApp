@@ -4,4 +4,6 @@
     <string name="pet_img">Pet Img</string>
     <string name="pet_name">Pet Name</string>
     <string name="care_tips">Care Tips</string>
+    <string name="String">Pet list</string>
+    <string name="String_animalSearchBox">Search for animal or species...</string>
 </resources>

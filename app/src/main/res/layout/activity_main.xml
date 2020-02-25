@@ -14,7 +14,7 @@
         android:layout_marginLeft="160dp"
         android:layout_marginBottom="64dp"
         android:onClick="onClick"
-        android:text="Petlist"
+        android:text="@string/String"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -26,7 +26,7 @@
         android:layout_marginLeft="77dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Search for animal or species..."
+        android:hint="@string/String_animalSearchBox"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
