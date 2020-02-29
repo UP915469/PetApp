@@ -18,16 +18,18 @@ class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAd
 
     List<Pet> pets;
     private Context context;
+    private OnSelectListener onSelectListener;
 
-    public PetAdapter(List<Pet> pets, Context context){
+    public PetAdapter(List<Pet> pets, Context context, OnSelectListener onSelectListener){
         this.pets = pets;
         this.context = context;
+        this.onSelectListener = onSelectListener;
     }
     @NonNull
     @Override
     public PetAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pet_list, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, onSelectListener);
     }
 
     @Override
@@ -42,13 +44,27 @@ class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAd
         return pets.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView petName;
         public ImageView petImg;
-        public ViewHolder(@NonNull View itemView) {
+        OnSelectListener onSelectListener;
+
+        public ViewHolder(@NonNull View itemView, OnSelectListener onSelectListener) {
             super(itemView);
             petName = itemView.findViewById(R.id.pet_name);
             petImg = itemView.findViewById(R.id.pet_img);
+
+            this.onSelectListener = onSelectListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view){
+            onSelectListener.onPetClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnSelectListener {
+        void onPetClick(int position);
     }
 }

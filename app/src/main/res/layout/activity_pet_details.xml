@@ -7,7 +7,7 @@
     tools:context=".PetDetails">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/pet_img"
         android:layout_width="92dp"
         android:layout_height="93dp"
         android:contentDescription="@string/pet_img"
@@ -16,11 +16,10 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/pet_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pet_name"
@@ -43,7 +42,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/care_comment_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

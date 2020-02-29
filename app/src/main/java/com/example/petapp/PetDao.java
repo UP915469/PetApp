@@ -15,7 +15,8 @@ public interface PetDao {
     List<Pet> findByName(String arg0);
     @Query("SELECT * FROM pet WHERE species LIKE :arg0")
     List<Pet> findBySpecies(String arg0);
-
+    @Query("SELECT * FROM pet WHERE id IS :arg0")
+    List<Pet> findById(Integer arg0);
     @Insert
     void insertAll(Pet... pet);
 
