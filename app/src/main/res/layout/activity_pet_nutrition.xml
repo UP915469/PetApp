@@ -6,6 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".PetNutrition">
 
+    <ImageView
+        android:id="@+id/pet_img5"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="168dp"
+        android:contentDescription="@string/pet_img"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/pet_img4"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="168dp"
+        android:contentDescription="@string/pet_img"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/pet_img3"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="168dp"
+        android:contentDescription="@string/pet_img"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
     <TextView
         android:id="@+id/pet_name2"
         android:layout_width="wrap_content"
@@ -34,12 +73,36 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="307dp"
-        android:layout_height="518dp"
+        android:layout_width="319dp"
+        android:layout_height="309dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:text="Pet nutritional details"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="168dp" />
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="295dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
