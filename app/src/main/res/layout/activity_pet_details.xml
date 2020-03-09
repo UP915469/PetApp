@@ -6,48 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".PetDetails">
 
-    <ImageView
-        android:id="@+id/pet_img"
-        android:layout_width="92dp"
-        android:layout_height="93dp"
-        android:contentDescription="@string/pet_img"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="411dp"
+        android:layout_height="162dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pet_img"
+                android:layout_width="193dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/test" />
+
+            <TextView
+                android:id="@+id/pet_species"
+                android:layout_width="142dp"
+                android:layout_height="34dp"
+                android:layout_marginBottom="36dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/pet_name"
+                android:layout_width="142dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="58dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="32dp"
+                android:text="Name"
+                app:layout_constraintEnd_toStartOf="@+id/pet_name"
+                app:layout_constraintHorizontal_bias="0.388"
+                app:layout_constraintStart_toEndOf="@+id/pet_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="58dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="92dp"
+                android:text="Species"
+                app:layout_constraintEnd_toStartOf="@+id/pet_name"
+                app:layout_constraintHorizontal_bias="0.388"
+                app:layout_constraintStart_toEndOf="@+id/pet_img"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/pet_name"
+        android:id="@+id/textView9"
+        android:layout_width="410dp"
+        android:layout_height="34dp"
+        android:text="Handling Advice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="410dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="440dp"
+        android:gravity="center"
+        android:text="Nutrition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/care_comment_1"
+        android:layout_width="299dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/care_comment_2"
+        android:layout_width="299dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/care_comment_1" />
+
+    <TextView
+        android:id="@+id/care_comment_3"
+        android:layout_width="299dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/care_comment_2" />
+
+    <Button
+        android:id="@+id/nutrition_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pet_name"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="617dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="28dp"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <TextView
-            android:id="@+id/care_comment_1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/care_tips" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.684" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

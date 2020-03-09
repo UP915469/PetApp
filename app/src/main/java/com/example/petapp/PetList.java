@@ -23,24 +23,21 @@ public class PetList extends AppCompatActivity implements PetAdapter.OnSelectLis
     RecyclerView.LayoutManager layoutManager;
     List<Pet> pets;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_list);
+
+        Intent mIntent = getIntent();
+        String searchTerm = mIntent.getStringExtra("search_term");
 
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "pet-app").allowMainThreadQueries().fallbackToDestructiveMigration().build();
 
         recyclerView = findViewById(R.id.recycler_view);
 
-            db.petDao().insertAll( new Pet("Beagle ", "Dog", "beagle",
-                    "10 years", "40pounds", "c1", "c2",
-                    "c3", 1, 2, 3));
-            db.petDao().insertAll( new Pet("Tabby Cat", "Cat", "tabbycat",
-                    "10 years", "20pounds", "c1", "c2",
-                    "c3", 1, 2, 3));
-
-        pets = db.petDao().findBySpecies("Cat");
+        pets = db.petDao().findBySpecies(searchTerm);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -52,7 +49,7 @@ public class PetList extends AppCompatActivity implements PetAdapter.OnSelectLis
     public void onPetClick(int position) {
         int petId = pets.get(position).getId();
 
-        Intent intent = new Intent(PetList.this, PetNutrition.class);
+        Intent intent = new Intent(PetList.this, PetDetails.class);
         intent.putExtra("pet_id", petId);
 
         startActivity(intent);
