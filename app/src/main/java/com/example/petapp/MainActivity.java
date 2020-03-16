@@ -16,17 +16,23 @@ import android.widget.SearchView;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
     ListView search_pet;
     ArrayAdapter<String> adapter;
+    List<String> searchTerms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /* Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
+        when the user enters their search term */
+        searchTerms = Arrays.asList("Cat", "Dog", "Beagle", "Tabby Cat", "Kitty", "Puppy");
 
         search_pet = findViewById(R.id.search_list);
 
@@ -57,10 +63,18 @@ public class MainActivity extends AppCompatActivity {
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String s) {
-                Intent intent = new Intent(MainActivity.this, PetList.class);
-                intent.putExtra("search_term", s);
-                startActivity(intent);
+            public boolean onQueryTextSubmit(final String s) {
+                String search = s.toLowerCase();
+
+                for (String str: searchTerms) {
+                    if(str.trim().toLowerCase().contains(search)){
+                        Intent intent = new Intent(MainActivity.this, PetList.class);
+                        intent.putExtra("search_term", s);
+                        startActivity(intent);
+                        return false;
+                    }
+                }
+                
                 return false;
             }
 

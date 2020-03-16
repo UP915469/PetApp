@@ -11,10 +11,8 @@ import java.util.List;
 public interface PetDao {
     @Query("SELECT * FROM pet")
     List<Pet> getAllUsers();
-    @Query("SELECT * FROM pet WHERE name LIKE :arg0")
-    List<Pet> findByName(String arg0);
-    @Query("SELECT * FROM pet WHERE species LIKE :arg0")
-    List<Pet> findBySpecies(String arg0);
+    @Query("SELECT * FROM pet WHERE name LIKE :arg0 OR species LIKE :arg0")
+    List<Pet> findByNameOrSpecies(String arg0);
     @Query("SELECT * FROM pet WHERE id IS :arg0")
     List<Pet> findById(Integer arg0);
     @Insert

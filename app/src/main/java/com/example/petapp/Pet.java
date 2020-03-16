@@ -46,7 +46,6 @@ public class Pet {
     @ColumnInfo(name = "food_id_3")
     private int food3Id;
 
-    //Pet Constructor
     public Pet(String name, String species, String imgPath, String avgAge, String avgWeight, String careComment1, String careComment2, String careComment3, int food1Id, int food2Id, int food3Id ){
         this.name = name;
         this.species = species;

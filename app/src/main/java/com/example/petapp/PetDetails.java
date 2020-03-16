@@ -27,6 +27,8 @@ public class PetDetails extends AppCompatActivity {
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "pet-app").allowMainThreadQueries().fallbackToDestructiveMigration().build();
 
+
+
         List<Pet> pet = db.petDao().findById(petId);
 
 
@@ -47,8 +49,8 @@ public class PetDetails extends AppCompatActivity {
         careComment3.setText(pet.get(0).getCareComment3());
 
         final Integer foodId1 = pet.get(0).getFood1Id();
-        final Integer foodId2 = pet.get(0).getFood1Id();
-        final Integer foodId3 = pet.get(0).getFood1Id();
+        final Integer foodId2 = pet.get(0).getFood2Id();
+        final Integer foodId3 = pet.get(0).getFood3Id();
         //Sets the button in pet details screen to have an onclick moving user to nutrition screen, parsing in the food ids to search nutrition table for.
 
         Button nutritionBtn = findViewById(R.id.nutrition_btn);
