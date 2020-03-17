@@ -12,8 +12,7 @@
         android:layout_width="252dp"
         android:layout_height="257dp"
         android:foregroundGravity="center"
-        android:layout_centerInParent="true"
-        app:srcCompat="@drawable/animalplanet" />
+        android:layout_centerInParent="true"/>
 
     <TextView
         android:id="@+id/searchinfo"

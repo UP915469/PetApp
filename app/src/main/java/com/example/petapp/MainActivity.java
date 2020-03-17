@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         final ImageView imageView = findViewById(R.id.searchimg);
         final TextView textView = findViewById(R.id.searchinfo);
 
+        int resourceId = this.getResources().getIdentifier("animalplanet","drawable","com.example.petapp");
+        imageView.setImageResource(resourceId);
         listView.setVisibility(View.INVISIBLE);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
