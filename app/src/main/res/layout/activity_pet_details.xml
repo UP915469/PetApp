@@ -70,30 +70,32 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="410dp"
-        android:layout_height="34dp"
+        android:layout_width="413dp"
+        android:layout_height="18dp"
+        android:gravity="center"
         android:text="Handling Advice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="410dp"
         android:layout_height="34dp"
-        android:layout_marginTop="440dp"
         android:gravity="center"
-        android:text="Nutrition"
+        android:text="Click this button to see recommended food for this pet"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/nutrition_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/care_comment_3" />
 
     <TextView
         android:id="@+id/care_comment_1"
         android:layout_width="299dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -103,17 +105,18 @@
     <TextView
         android:id="@+id/care_comment_2"
         android:layout_width="299dp"
-        android:layout_height="116dp"
+        android:layout_height="105dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/care_comment_1" />
 
     <TextView
         android:id="@+id/care_comment_3"
         android:layout_width="299dp"
-        android:layout_height="116dp"
+        android:layout_height="105dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,15 +126,43 @@
 
     <Button
         android:id="@+id/nutrition_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="107dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="28dp"
-        android:text="Button"
+        android:background="@drawable/rounded_button"
+        android:text="Nutrition"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="299dp"
+        android:layout_height="2.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintTop_toBottomOf="@+id/care_comment_2"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="299dp"
+        android:layout_height="2.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/care_comment_1"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="299dp"
+        android:layout_height="2.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/care_comment_3"
+        app:srcCompat="@color/colorPrimary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

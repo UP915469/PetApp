@@ -81,9 +81,10 @@ public class MainActivity extends AppCompatActivity {
                     if(str.trim().toLowerCase().contains(search)){
                         Intent intent = new Intent(MainActivity.this, PetList.class);
                         intent.putExtra("search_term", s);
+
                         startActivity(intent);
                         return false;
-                    } else {
+                    } else if(!(str.trim().toLowerCase().contains(search))){
                         Toast.makeText(MainActivity.this, "Please check spelling or spaces", Toast.LENGTH_SHORT).show();
                     }
                 }

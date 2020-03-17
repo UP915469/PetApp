@@ -54,6 +54,7 @@ public class PetList extends AppCompatActivity implements PetAdapter.OnSelectLis
 
         if(pets.size() == 1){
             onPetClick(0);
+            PetList.this.finishActivity(0);
         }
 
         layoutManager = new LinearLayoutManager(this);
