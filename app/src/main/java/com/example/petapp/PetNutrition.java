@@ -48,7 +48,6 @@ public class PetNutrition extends AppCompatActivity {
         int[] foodIds = {foodId1, foodId2, foodId3};
         foods = db.foodDao().getFoodById(foodIds);
 
-        System.out.println(foods.size() + "size");
         ImageView foodImg1 = findViewById(R.id.food_img_1);
         ImageView foodImg2 = findViewById(R.id.food_img_2);
         ImageView foodImg3 = findViewById(R.id.food_img_3);

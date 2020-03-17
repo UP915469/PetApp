@@ -10,8 +10,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -61,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
         MenuItem item = menu.findItem(R.id.search_pets);
         SearchView searchView = (SearchView)item.getActionView();
 
+        final ListView listView = findViewById(R.id.search_list);
+        final ImageView imageView = findViewById(R.id.searchimg);
+        final TextView textView = findViewById(R.id.searchinfo);
+
+        listView.setVisibility(View.INVISIBLE);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(final String s) {
@@ -72,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("search_term", s);
                         startActivity(intent);
                         return false;
+                    } else {
+                        Toast.makeText(MainActivity.this, "Please check spelling or spaces", Toast.LENGTH_SHORT).show();
                     }
                 }
                 
@@ -80,8 +91,18 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String s) {
-                adapter.getFilter().filter(s);
-                return false;
+                if(s.isEmpty()){
+                    listView.setVisibility(View.INVISIBLE);
+                    imageView.setVisibility(View.VISIBLE);
+                    textView.setVisibility(View.VISIBLE);
+                    return false;
+                } else{
+                    listView.setVisibility(View.VISIBLE);
+                    imageView.setVisibility(View.INVISIBLE);
+                    textView.setVisibility(View.INVISIBLE);
+                    adapter.getFilter().filter(s);
+                    return false;
+                }
             }
         });
 
