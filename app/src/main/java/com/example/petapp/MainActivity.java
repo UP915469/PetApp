@@ -1,6 +1,7 @@
 package com.example.petapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 
 import android.content.Intent;
@@ -25,15 +26,43 @@ public class MainActivity extends AppCompatActivity {
     ListView search_pet;
     ArrayAdapter<String> adapter;
     List<String> searchTerms;
+    List<Pet> pets;
+    List<Food>foods;
+    DBHelper dbHelper = new DBHelper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* Initialises db for user */
+        final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "pet-app").allowMainThreadQueries().fallbackToDestructiveMigration().build();
+
+        pets = db.petDao().getAllUsers();
+        for(Pet p : pets){
+            db.petDao().delete(p);
+        }
+        pets = db.petDao().getAllUsers();
+        if(pets.size() == 0){
+            List<Pet> insertPet = dbHelper.initialisePets();
+
+            for(Pet p: insertPet){
+                db.petDao().insertAll(p);
+            }
+        }
+
+        foods = db.foodDao().getAllFoods();
+        if(foods.size() == 0){
+            List<Food> insertFood = dbHelper.initializeFood();
+            for(Food f: insertFood){
+                db.foodDao().insertAll(f);
+            }
+        }
+
         /* Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
         when the user enters their search term */
-        searchTerms = Arrays.asList("Cat", "Dog", "Beagle", "Tabby Cat", "Kitty", "Puppy");
+        searchTerms = Arrays.asList("Cat", "Dog", "Beagle", "Bulldog", "Golden Retriever", "Shiba Inu", "Dobermann", "Siamese", "Bengal", "Persian");
 
         search_pet = findViewById(R.id.search_list);
 
@@ -74,15 +103,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(final String s) {
                 String search = s.toLowerCase();
-
+                Boolean toast = false;
                 for (String str: searchTerms) {
                     if(str.trim().toLowerCase().contains(search)){
+                        toast = true;
                         Intent intent = new Intent(MainActivity.this, PetList.class);
                         intent.putExtra("search_term", s);
                         startActivity(intent);
                         return false;
-                    } else if(!(str.trim().toLowerCase().contains(search))){
-                        Toast.makeText(MainActivity.this, "Please check spelling or spaces", Toast.LENGTH_SHORT).show();
+                    } else{
+                        if(toast == false){
+                            Toast.makeText(MainActivity.this, "Please check spelling or spaces", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
                 

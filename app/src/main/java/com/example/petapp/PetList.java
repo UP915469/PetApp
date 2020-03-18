@@ -29,20 +29,6 @@ public class PetList extends AppCompatActivity implements PetAdapter.OnSelectLis
 
         recyclerView = findViewById(R.id.recycler_view);
 
-        pets = db.petDao().getAllUsers();
-        for(Pet p : pets){
-            db.petDao().delete(p);
-        }
-
-        db.petDao().insertAll(new Pet("Beagle", "Dog", "beagle", "6 years old", "20pounds", "handle with care"
-        , "2nd care comment", "final care comment", 1, 2,3),
-                new Pet("Tabby Cat", "Cat", "tabbycat", "8 years old", "10pounds", "handle with care"
-                        , "2nd care comment", "final care comment", 1, 2,3),
-                new Pet("Puppy", "Dog", "tabbycat", "8 years old", "10pounds", "handle with care"
-                        , "2nd care comment", "final care comment", 1, 2,3),
-                new Pet("Kitty", "Cat", "tabbycat", "8 years old", "10pounds", "handle with care"
-                , "2nd care comment", "final care comment", 1, 2,3));
-
         pets = db.petDao().findByNameOrSpecies(searchTerm);
 
         if(pets.size() == 1){

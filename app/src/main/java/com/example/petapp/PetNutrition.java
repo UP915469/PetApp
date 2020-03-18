@@ -37,14 +37,6 @@ public class PetNutrition extends AppCompatActivity {
                 AppDatabase.class, "pet-app").allowMainThreadQueries().fallbackToDestructiveMigration().build();
 
         foods = db.foodDao().getAllFoods();
-
-        System.out.println(foods.get(0).getId()  + " "  + foods.get(1).getId()  + " " + foods.get(2).getId());
-        if(foods.size() == 0 ){
-            db.foodDao().insertAll(new Food("Dog Food", "dogfood", "Tesco", "Pets at Home", "Argos", "This is nutritional food"),
-                    new Food("Dog Food", "dogfood", "Tesco", "Pets at Home", "Argos", "This is nutritional I believe"),
-                    new Food("Dog Food", "dogfood", "Tesco", "Pets at Home", "Sainsburys", "This is nutritional food I hope"));
-        }
-
         int[] foodIds = {foodId1, foodId2, foodId3};
         foods = db.foodDao().getFoodById(foodIds);
 

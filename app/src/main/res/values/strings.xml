@@ -9,7 +9,12 @@
     <string name="String_animalSearchBox">Search for animal or species...</string>
     <string-array name="my_pets">
         <item>Beagle</item>
-        <item>Tabby Cat</item>
+        <item>Bulldog</item>
+        <item>Bengal</item>
+        <item>Persian</item>
+        <item>Dobermann</item>
+        <item>Siamese</item>
+        <item>Shiba Inu</item>
         <item>Golden Retriever</item>
         <item>Dog</item>
         <item>Cat</item>

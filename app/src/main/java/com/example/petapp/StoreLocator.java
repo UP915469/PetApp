@@ -116,9 +116,9 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
         LatLng latLng3 = getLatLng(store3);
         MarkerOptions options1 = new MarkerOptions().position(latLng1).title(store1);
         mMap.addMarker(options1);
-        MarkerOptions options2 = new MarkerOptions().position(latLng2).title(store1);
+        MarkerOptions options2 = new MarkerOptions().position(latLng2).title(store2);
         mMap.addMarker(options2);
-        MarkerOptions options3 = new MarkerOptions().position(latLng3).title(store1);
+        MarkerOptions options3 = new MarkerOptions().position(latLng3).title(store3);
         mMap.addMarker(options3);
     }
 
@@ -179,8 +179,11 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
             case "Pets at Home":
                 latLng = new LatLng(50.815809,-1.054626);
                 break;
-            case "Argos":
-                latLng = new LatLng(50.802460,-1.088368);
+            case "Morrisons":
+                latLng = new LatLng(50.806650,-1.088980);
+                break;
+            case "Sainsburys":
+                latLng = new LatLng(50.804260,-1.087230);
                 break;
             default:
                 break;

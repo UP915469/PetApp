@@ -1,10 +1,11 @@
 package com.example.petapp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DBHelper {
-    List<Pet> pets;
-    List<Food> foods;
+    List<Pet> pets = new ArrayList<>();
+    List<Food> foods = new ArrayList<>();
 
     public List<Pet> initialisePets(){
         pets.add(new Pet("Beagle", "Dog", "beagle", "12-15 years", "Male: 10-11kg, Female: 9-10kg", "" +
@@ -22,12 +23,12 @@ public class DBHelper {
                 "Bulldogs are mellow and are happy to relax next to their owner’s feet, but they also enjoy an occasional romp and going on walks. Moderate exercise will help the dog to stay trim. Very warm days are best spent in front of an air-conditioner, however, as the Bulldog’s short muzzle can make breathing difficult in heat and humidity." +
                  " Stairs and pools also present major safety hazards. ",
                 "An all-over brushing with a soft brush for 10 minutes two or three times a week will keep the Bulldog looking his best. During periods of heavier shedding, it can help to first use a rubber curry brush. The wrinkles on the Bulldog’s face need to be regularly checked to make sure the skin is clean and dry, as food or moisture can get trapped and cause irritation or infection.",
-                1,2,3));
+                2,3,4));
         pets.add(new Pet("Golden Retriever", "Dog", "golden", "10-12 years", "Male: 30-34kg, Female: 25-32kg", "Golden retrievers have an outgoing, devoted, and friendly personality, making this type of dog a great addition to any family. They maintain a playful and energetic approach to life longer than some other breeds, so be ready to play lots of " +
                 "fetch with your golden retriever!",
                 "Golden retrievers are also incredibly intelligent and eager to please, which makes them easy to train. Basic obedience and house-training skills, including potty training and not digging, should be taught when your golden retriever is a puppy. With more advanced training, golden retrievers can serve as guide dogs for the blind, rescue dogs, and hunting dogs.",
                 " Golden retrievers need plenty of exercise; they love playing outdoors and swimming. As far as care, the golden retriever has a thick, water-repellent double-coat, which can be wavy or straight. Its coat needs to be brushed twice a week to help control shedding. Golden retrievers have strong, fast-growing nails that require regular trimming or grinding to prevent overgrowth, splitting, and cracking. ",
-                1,2,3));
+                1,3,4));
         pets.add(new Pet("Shiba Inu", "Dog", "shiba", "12-15 years", "Male: 8-11kg, 6.8-9kg", "Considered highly trainable and easier to housebreak, you won’t find many troubles with the Shiba Inu. It can be stubborn at times, because of its confidence and strong instincts, but if you demonstrate that you’re the pack leader, there should be no problems keeping your dog on a strict discipline program.",
                 "The most common health problems of the Shiba Inu relate to joint problems, which is not rare for dogs but a little unusual for dogs of its size. You might even notice kneecap problems in this dog, not a common problem in other dogs.",
                 "Though small, the Shiba Inu has a surprising thirst for some forms of exercise and will be able to catch up with you easily if you take it out often. Regular walking should be considered a normal habit, and certainly something you’ll want to get into with any dog. The breed might also want to get away from you at times to explore natural landscapes.",
@@ -39,10 +40,43 @@ public class DBHelper {
                 "Socialize your Doberman from an early age to prevent any issues with aggression later in life toward other people or dogs. Have your young Doberman play with other dogs and expose him to a variety of other people starting at 12 weeks old.\n" +
                 "This intelligent, obedient dog can be trained to be a guide dog for the blind with a certified guide dog instructor.",
                 1, 2,3));
+        pets.add(new Pet("Persian", "Cat", "persian", "10-17 years", "7-12 pounds", "Most cats stay relatively clean and rarely need a bath, but you should brush or comb your cat regularly. Frequent brushing helps keep your cat's coat clean, reduces the amount of shedding and cuts down on the incidence of hairballs.",
+                "To pick up your cat, place one hand behind the front legs and another under the hindquarters. Lift gently. Never pick up a cat by the scruff of the neck or by the front legs.",
+                "Your pet should have her own clean, dry place in your home to sleep and rest. Line your cat's bed with a soft, warm blanket or towel. Be sure to wash the bedding often. Please keep your cat indoors. Outdoor cats do not live as long as indoor cats. Outdoor cats are at risk of trauma from cars, or from fights with other cats, raccoons and free-roaming dogs. ",
+                5,6,7));
+        pets.add(new Pet("Bengal", "Cat", "bengal", "14-16 years", "10-15 pounds", "Most cats stay relatively clean and rarely need a bath, but you should brush or comb your cat regularly. Frequent brushing helps keep your cat's coat clean, reduces the amount of shedding and cuts down on the incidence of hairballs.",
+                "To pick up your cat, place one hand behind the front legs and another under the hindquarters. Lift gently. Never pick up a cat by the scruff of the neck or by the front legs.",
+                "Your pet should have her own clean, dry place in your home to sleep and rest. Line your cat's bed with a soft, warm blanket or towel. Be sure to wash the bedding often. Please keep your cat indoors. Outdoor cats do not live as long as indoor cats. Outdoor cats are at risk of trauma from cars, or from fights with other cats, raccoons and free-roaming dogs. ",
+                5,6,7));
+        pets.add(new Pet("Siamese", "Cat", "siamese", "15-20 years", "10-13 pounds", "Most cats stay relatively clean and rarely need a bath, but you should brush or comb your cat regularly. Frequent brushing helps keep your cat's coat clean, reduces the amount of shedding and cuts down on the incidence of hairballs.",
+                "To pick up your cat, place one hand behind the front legs and another under the hindquarters. Lift gently. Never pick up a cat by the scruff of the neck or by the front legs.",
+                "Your pet should have her own clean, dry place in your home to sleep and rest. Line your cat's bed with a soft, warm blanket or towel. Be sure to wash the bedding often. Please keep your cat indoors. Outdoor cats do not live as long as indoor cats. Outdoor cats are at risk of trauma from cars, or from fights with other cats, raccoons and free-roaming dogs. ",
+                5,6,7));
         return pets;
     }
 
     public List<Food> initializeFood(){
+
+        foods.add(new Food("Butcher's Loaf Recipes", "butchers", "Tesco", "Morrisons", "Pets at Home",
+                "Butchers: Meals rich in all the nutrients your dog needs.\n" +
+                        "No Nasties, No artificial colours, flavours or preservatives, Wholegrain Rice, Easy to digest, high in fibre and naturally gluten free, Garden Veg\n" +
+                        "Great fibre source and packed with vitamins, Beneficial Oils, Omega 3 and 6 for healthy skin and coat"));
+        foods.add(new Food("Pedigree Pouch Real Meals", "pedigree", "Tesco", "Morrisons", "Sainsburys",
+                "Pedigree: Easy-to-open individual packets, ideal for a fresh healthy meal, on its own or on top of dry canine food\n" +
+                        "Nutrition for dogs that helps support healthy bones, good digestion, a healthy skin & coat and strong natural defenses"));
+        foods.add(new Food("Winalot Sunday Dinner ", "winalot", "Pets at Home", "Morrisons", "Sainsburys",
+                "Winalot: ade with succulent meaty chunks and quality ingredients.\n" +
+                        "It contains all the essential vitamins and minerals your dog needs to ensure every bowl of Winalot is 100% Complete and balanced."));
+        foods.add(new Food("Cesar Tray Country Kitchen", "cesar", "Tesco", "Pets at Home", "Sainsburys",
+                "Cesar: Quality pet food made with carefully selected ingredients\n" +
+                        "Delicious dog food recipes made with no added sugars, no artificial colours or flavour"));
+        foods.add(new Food("Purina One Adult Dry Cat Food", "purina", "Tesco", "Morrisons", "Pets at Home",
+                "Purina: contains, along with the beneficial functional bacteria, all the key nutrients your cat needs, including Omega 6 fatty acids.\n" +
+                        "Its dual defence formula works in parallel on the inside, by helping to support your cat's natural antibody production, and on the outside by maintaining healthy skin and coat."));
+        foods.add(new Food("Felix As Good As It Looks", "felix", "Tesco", "Morrisons", "Sainsburys",
+                "Felix: 100% of your cat's daily needs, Irresistible meals for mischief makers, Vitamins D & E, Balanced minerals, Source of omega 6"));
+        foods.add(new Food("Gourmet Mon Petit Fish", "gourmet", "Pets at Home", "Morrisons", "Sainsburys",
+                "Gourmet: 100% complete and balanced nutritional pet food for adult cats (aged 1 to 7), Packed with essential vitamins and minerals to keep your adult cat healthy"));
 
         return foods;
     }
