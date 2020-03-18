@@ -4,32 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     tools:context=".PetDetails">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="411dp"
-        android:layout_height="162dp"
+        android:layout_width="414dp"
+        android:layout_height="140dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="140dp">
 
             <ImageView
                 android:id="@+id/pet_img"
-                android:layout_width="193dp"
-                android:layout_height="match_parent"
+                android:layout_width="174dp"
+                android:layout_height="137dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/pet_species"
                 android:layout_width="142dp"
                 android:layout_height="34dp"
-                android:layout_marginBottom="36dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="30dp"
                 android:text="TextView"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -38,7 +41,9 @@
                 android:id="@+id/pet_name"
                 android:layout_width="142dp"
                 android:layout_height="34dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -47,10 +52,10 @@
                 android:id="@+id/textView7"
                 android:layout_width="58dp"
                 android:layout_height="34dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="28dp"
                 android:text="Name"
                 app:layout_constraintEnd_toStartOf="@+id/pet_name"
-                app:layout_constraintHorizontal_bias="0.388"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/pet_img"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,10 +63,10 @@
                 android:id="@+id/textView8"
                 android:layout_width="58dp"
                 android:layout_height="34dp"
-                android:layout_marginTop="92dp"
+                android:layout_marginTop="76dp"
                 android:text="Species"
                 app:layout_constraintEnd_toStartOf="@+id/pet_name"
-                app:layout_constraintHorizontal_bias="0.388"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/pet_img"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -75,6 +80,7 @@
         android:gravity="center"
         android:text="Handling Advice"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
@@ -82,10 +88,10 @@
         android:id="@+id/textView13"
         android:layout_width="410dp"
         android:layout_height="34dp"
+        android:layout_marginTop="52dp"
         android:gravity="center"
         android:text="Click this button to see recommended food for this pet"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/nutrition_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +112,7 @@
         android:id="@+id/care_comment_2"
         android:layout_width="299dp"
         android:layout_height="105dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -128,13 +134,12 @@
         android:id="@+id/nutrition_btn"
         android:layout_width="107dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
         android:text="Nutrition"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <ImageView
         android:id="@+id/imageView"

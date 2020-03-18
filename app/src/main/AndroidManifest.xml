@@ -13,10 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".StoreLocator"/>
-        <activity android:name=".PetDetails" />
-        <activity android:name=".PetNutrition" />
-        <activity android:name=".PetList" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".PetDetails"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PetNutrition"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PetList"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

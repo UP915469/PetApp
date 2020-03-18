@@ -5,16 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.IntentSender;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.ResolvableApiException;
-import com.google.android.gms.location.FusedLocationProviderApi;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -23,13 +18,10 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.SettingsClient;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -51,9 +43,12 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
     private FusedLocationProviderClient mfusedLocationProviderClient;
     private PlacesClient placesClient;
     private List<AutocompletePrediction> predictionList;
-
+    private Intent mIntent = getIntent();
     private Location mLastKnownLocation;
     private LocationCallback locationCallback;
+    String store1;
+    String store2;
+    String store3;
 
     final float DEFAULT_ZOOM = 10;
 
@@ -61,6 +56,11 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_locator);
+
+        Intent mIntent = getIntent();
+        store1 = mIntent.getStringExtra("store_1");
+        store2 = mIntent.getStringExtra("store_2");
+        store3 = mIntent.getStringExtra("store_3");
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -92,6 +92,8 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onSuccess(LocationSettingsResponse locationSettingsResponse) {
                 getDeviceLocation();
+
+
             }
         });
 
@@ -108,6 +110,16 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
                 }
             }
         });
+
+        LatLng latLng1 = getLatLng(store1);
+        LatLng latLng2 = getLatLng(store2);
+        LatLng latLng3 = getLatLng(store3);
+        MarkerOptions options1 = new MarkerOptions().position(latLng1).title(store1);
+        mMap.addMarker(options1);
+        MarkerOptions options2 = new MarkerOptions().position(latLng2).title(store1);
+        mMap.addMarker(options2);
+        MarkerOptions options3 = new MarkerOptions().position(latLng3).title(store1);
+        mMap.addMarker(options3);
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -130,7 +142,6 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
                             if(mLastKnownLocation != null){
                                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLastKnownLocation.getLatitude(),
                                         mLastKnownLocation.getLongitude()), DEFAULT_ZOOM));
-
                             } else {
                                 final LocationRequest locationRequest = LocationRequest.create();
                                 locationRequest.setInterval(10000);
@@ -146,7 +157,6 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
                                         mLastKnownLocation = locationResult.getLastLocation();
                                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLastKnownLocation.getLatitude(),
                                                 mLastKnownLocation.getLongitude()), DEFAULT_ZOOM));
-
                                     }
                                 };
                                 mfusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null);
@@ -158,4 +168,24 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
                     }
                 });
     }
+
+    public LatLng getLatLng(String store){
+        LatLng latLng = new LatLng(0,0);
+
+        switch (store){
+            case "Tesco":
+                latLng = new LatLng(50.800782,-1.087534);
+                break;
+            case "Pets at Home":
+                latLng = new LatLng(50.815809,-1.054626);
+                break;
+            case "Argos":
+                latLng = new LatLng(50.802460,-1.088368);
+                break;
+            default:
+                break;
+        }
+        return latLng;
+    }
+
 }

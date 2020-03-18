@@ -3,17 +3,10 @@ package com.example.petapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Database;
 import androidx.room.Room;
-import androidx.room.RoomDatabase;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PetList extends AppCompatActivity implements PetAdapter.OnSelectListener {

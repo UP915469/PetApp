@@ -15,8 +15,6 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
         MenuItem item = menu.findItem(R.id.search_pets);
-        SearchView searchView = (SearchView)item.getActionView();
+        final SearchView searchView = (SearchView)item.getActionView();
 
         final ListView listView = findViewById(R.id.search_list);
         final ImageView imageView = findViewById(R.id.searchimg);
@@ -81,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
                     if(str.trim().toLowerCase().contains(search)){
                         Intent intent = new Intent(MainActivity.this, PetList.class);
                         intent.putExtra("search_term", s);
-
                         startActivity(intent);
                         return false;
                     } else if(!(str.trim().toLowerCase().contains(search))){
