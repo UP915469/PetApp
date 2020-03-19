@@ -7,3 +7,6 @@ might not be able to test the full capabilities of the store location functional
 
 Documentation:
 Documentation is provided within the doc-files folder within this repository. Anotation follows javadoc rules.
+
+Demo link:
+A video demo on how to this app is provided here: https://vimeo.com/398924070
