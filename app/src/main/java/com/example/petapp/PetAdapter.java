@@ -6,14 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
-import static java.security.AccessController.getContext;
-
+/**
+ *  @author UP915469
+ *  Adapter used to manage the pet lists functionatility.
+ * @see com.example.petapp.PetList for information on how this adapter is used.
+ */
 class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAdapter.ViewHolder> {
 
     List<Pet> pets;
@@ -44,6 +45,11 @@ class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAd
         return pets.size();
     }
 
+    /**
+     *  @author UP915469
+     *  Class responsible for assigning the pet name and img to each list item
+     *  Also manages the onclick call for each list item.
+     */
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView petName;
         public ImageView petImg;

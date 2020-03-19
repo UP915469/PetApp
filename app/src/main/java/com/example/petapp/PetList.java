@@ -31,17 +31,32 @@ public class PetList extends AppCompatActivity implements PetAdapter.OnSelectLis
 
         pets = db.petDao().findByNameOrSpecies(searchTerm);
 
+        /**
+         *  @author UP915469
+         *  if only 1 pet is returned from the users search on homescreen then onPetClick is automatically called
+         *  sending the user to the petdetails pet with that specifics pets information
+         */
         if(pets.size() == 1){
             onPetClick(0);
             PetList.this.finishActivity(0);
         }
 
+        /**
+         *  @author UP915469
+         *  Standard way of intialising the recycler view list and setting the adapter to be used with the functionality the list will contain.
+         *  Information related to this contained with the official developer android documentation.
+         */
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new PetAdapter(pets, this, this);
         recyclerView.setAdapter(adapter);
     }
 
+    /**
+     *  @author UP915469
+     * @param position gets the clicked items position in the list and uses that integer to search the arraylist for that specific clicked pets id.
+     * That id is then parsed to the petdetails page to be used to search the database.
+     */
     @Override
     public void onPetClick(int position) {
         int petId = pets.get(position).getId();

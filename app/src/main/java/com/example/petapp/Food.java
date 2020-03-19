@@ -4,7 +4,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
+/**
+ * @author UP915469
+ * @see com.example.petapp.Pet for explanation of class purpose.
+ */
 @Entity
 public class Food {
     @PrimaryKey(autoGenerate = true)

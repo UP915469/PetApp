@@ -37,6 +37,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author UP91469
+ * Manageses the maps view as well how the markers are placed within it.
+ */
 public class StoreLocator extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -57,6 +61,10 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_locator);
 
+        /**
+         * @author UP91469
+         * gets the store names parsed from nutrition screen to call latLng function with
+         */
         Intent mIntent = getIntent();
         store1 = mIntent.getStringExtra("store_1");
         store2 = mIntent.getStringExtra("store_2");
@@ -132,6 +140,12 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    /**
+     * @author UP91469
+     * Function that gets users current location for use by the map
+     * Requests user give permission for location before use and notifies them to turn on location if it isn't already.
+     * Update maps camera to the location using the zoom variable created.
+     */
     private void getDeviceLocation() {
         mfusedLocationProviderClient.getLastLocation()
                 .addOnCompleteListener(new OnCompleteListener<Location>() {
@@ -169,6 +183,11 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
                 });
     }
 
+    /**
+     * @author UP91469
+     * @param store this function takes a store variable obtained from this intent. Store variables are parsed to this intent from pet nutrition screen.
+     * @return this returns a LatLng object specifying the coordinates of the store variable used.
+     */
     public LatLng getLatLng(String store){
         LatLng latLng = new LatLng(0,0);
 

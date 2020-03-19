@@ -21,7 +21,10 @@ public class PetDetails extends AppCompatActivity {
 
         Intent mIntent = getIntent();
 
-        //Gets the id parsed into this screen from previous MainActivity/PetList screens and uses that id to search for a specific pet from the db.
+        /**
+         * @author UP915469
+         * Gets the id parsed into this screen from previous MainActivity/PetList screens and uses that id to search for a specific pet from the db.
+         */
         int petId = mIntent.getIntExtra("pet_id", 0);
 
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
@@ -32,7 +35,9 @@ public class PetDetails extends AppCompatActivity {
         List<Pet> pet = db.petDao().findById(petId);
 
 
-        //Sets the image and text views in the pet details screen to equal the content returned from accesing that specific queried pets get methods.
+        /**
+         *  @author UP915469
+         * Sets the image and text views in the pet details screen to equal the content returned from accesing that specific queried pets get methods. */
         ImageView petImg = findViewById(R.id.pet_img);
         TextView petName = findViewById(R.id.pet_name);
         TextView petSpecies = findViewById(R.id.pet_species);
@@ -55,8 +60,11 @@ public class PetDetails extends AppCompatActivity {
         final Integer foodId1 = pet.get(0).getFood1Id();
         final Integer foodId2 = pet.get(0).getFood2Id();
         final Integer foodId3 = pet.get(0).getFood3Id();
-        //Sets the button in pet details screen to have an onclick moving user to nutrition screen, parsing in the food ids to search nutrition table for.
 
+        /**
+         *  @author UP915469
+         *  Sets the button in pet details screen to have an onclick moving user to nutrition screen, parsing in the food ids to search nutrition table for.
+         */
         Button nutritionBtn = findViewById(R.id.nutrition_btn);
 
         nutritionBtn.setOnClickListener(new View.OnClickListener() {

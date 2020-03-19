@@ -4,6 +4,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/**
+ * @author UP915469
+ * Class used by Room to create a relevant table in the db to contain objects of this class.
+ * Each variable is denoted by a line indicating what type of information this is in the table (data column or id), autoGenerate auto increments ids on entry into table.
+ */
 @Entity
 public class Pet {
     @PrimaryKey(autoGenerate = true)

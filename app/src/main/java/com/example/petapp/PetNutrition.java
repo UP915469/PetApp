@@ -26,7 +26,11 @@ public class PetNutrition extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_nutrition);
 
-        // Gets food id parsed to this activity from PetDetails screen, uses those to query db for correct food items
+        /**
+         * @author UP915469
+         * Gets food id parsed to this activity from PetDetails screen, uses those to query db for correct food items.
+         */
+
         Intent mIntent = getIntent();
 
         int foodId1 =  mIntent.getIntExtra("foodId1", 0);

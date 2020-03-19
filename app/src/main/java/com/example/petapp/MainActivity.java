@@ -2,8 +2,6 @@ package com.example.petapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -35,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* Initialises db for user */
+        /**
+         *  @author UP915469
+         *  Initialises db for user if its not already by checking if the db contains anything and if not inserting into it using the dbhelper class
+         *  @see com.example.petapp.DBHelper for information how this class works*/
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "pet-app").allowMainThreadQueries().fallbackToDestructiveMigration().build();
 
-        pets = db.petDao().getAllUsers();
-        for(Pet p : pets){
-            db.petDao().delete(p);
-        }
         pets = db.petDao().getAllUsers();
         if(pets.size() == 0){
             List<Pet> insertPet = dbHelper.initialisePets();
@@ -60,15 +57,19 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        /* Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
-        when the user enters their search term */
+        /**
+         *  @author UP915469
+         *  Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
+         *  when the user enters their search term */
         searchTerms = Arrays.asList("cat", "dog", "beagle", "bulldog", "golden retriever", "shiba inu", "dobermann", "siamese", "bengal", "persian");
 
         search_pet = findViewById(R.id.search_list);
 
-        /* Creates an array that takes and adds items from the my_pets items in res/strings.xml,
-        sets the adapter to use the listview provided in the layout file for main activity using the created array of items
-        which are pet names/species */
+        /**
+         *  @author UP915469
+         *  Creates an array that takes and adds items from the my_pets items in res/strings.xml,
+         *  sets the adapter to use the listview provided in the layout file for main activity using the created array of items
+         *  which are pet names/species */
         ArrayList<String> arrayPets = new ArrayList<>();
         arrayPets.addAll(Arrays.asList(getResources().getStringArray(R.array.my_pets)));
 
@@ -79,11 +80,15 @@ public class MainActivity extends AppCompatActivity {
         );
 
         search_pet.setAdapter(adapter);
+
+
     }
 
-    /* Creates the search action, parsing through the created menu file in res/menu giving context to where it will be
-    displayed. Creates the onQueryListener which handles how user interaction via searching dictates will affect which pet names/species
-    will be shown in the list as they search, assigning a filter for the text users enter. */
+    /**
+     * @author UP915469
+     *  Creates the search action, parsing through the created menu file in res/menu giving context to where it will be displayed.
+     *  Creates the onQueryListener which handles how user interaction via searching dictates will affect which pet names/species
+     *  will be shown in the list as they search, assigning a filter for the text users enter. */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();

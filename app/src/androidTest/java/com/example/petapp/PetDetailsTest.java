@@ -16,6 +16,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
+// Tests whether the activity can be reached like the MainActivityTest but then also calls the buttons function determining if the next screen can also be reached.
 public class PetDetailsTest {
     public ActivityTestRule<PetDetails> mActivityTestRule = new ActivityTestRule<PetDetails>(PetDetails.class);
 

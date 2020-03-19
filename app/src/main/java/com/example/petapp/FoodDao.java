@@ -7,6 +7,10 @@ import androidx.room.Query;
 
 import java.util.List;
 
+/**
+ * @author UP915469
+ * @see com.example.petapp.PetDao for explanation of class purpose.
+ */
 @Dao
 public interface FoodDao {
     @Query("SELECT * FROM food")
