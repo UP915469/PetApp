@@ -36,6 +36,8 @@ public class PetDetails extends AppCompatActivity {
         ImageView petImg = findViewById(R.id.pet_img);
         TextView petName = findViewById(R.id.pet_name);
         TextView petSpecies = findViewById(R.id.pet_species);
+        TextView petAge = findViewById(R.id.pet_age);
+        TextView petWeight = findViewById(R.id.pet_weight);
         TextView careComment1 = findViewById(R.id.care_comment_1);
         TextView careComment2 = findViewById(R.id.care_comment_2);
         TextView careComment3 = findViewById(R.id.care_comment_3);
@@ -44,6 +46,8 @@ public class PetDetails extends AppCompatActivity {
         petImg.setImageResource(resourceId);
         petName.setText(pet.get(0).getName());
         petSpecies.setText(pet.get(0).getSpecies());
+        petAge.setText(pet.get(0).getAvgAge());
+        petWeight.setText(pet.get(0).getAvgWeight());
         careComment1.setText(pet.get(0).getCareComment1());
         careComment2.setText(pet.get(0).getCareComment2());
         careComment3.setText(pet.get(0).getCareComment3());

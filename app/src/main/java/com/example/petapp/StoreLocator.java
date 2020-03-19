@@ -50,7 +50,7 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
     String store2;
     String store3;
 
-    final float DEFAULT_ZOOM = 10;
+    final float DEFAULT_ZOOM = 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

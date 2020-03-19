@@ -59,8 +59,8 @@ public class PetNutrition extends AppCompatActivity {
         foodName3.setText(foods.get(1).getFoodName());
         foodName2.setText(foods.get(2).getFoodName());
 
-        String nutritionCommment = foods.get(0).getNutritionComment() + "\n" +
-                foods.get(1).getNutritionComment() + "\n" +
+        String nutritionCommment = foods.get(0).getNutritionComment() + "\n\n" +
+                foods.get(1).getNutritionComment() + "\n\n" +
                 foods.get(2).getNutritionComment();
         nutritionComments.setText(nutritionCommment);
 

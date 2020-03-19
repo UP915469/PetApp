@@ -3,25 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="133dp">
+    android:layout_height="147.5dp">
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="133dp">
+        android:layout_height="145dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="133dp"
-            android:background="#1ED3C3">
+            android:layout_height="match_parent"
+            android:background="@drawable/pawprint"
+            android:tileMode="repeat">
 
             <ImageView
                 android:id="@+id/pet_img"
-                android:layout_width="117dp"
-                android:layout_height="94dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_width="133dp"
+                android:layout_height="98dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="16dp"
                 android:maxWidth="117dp"
                 android:maxHeight="94dp"
@@ -32,12 +33,16 @@
 
             <TextView
                 android:id="@+id/pet_name"
-                android:layout_width="191dp"
-                android:layout_height="94dp"
+                android:layout_width="162dp"
+                android:layout_height="42dp"
                 android:layout_marginEnd="52dp"
                 android:layout_marginRight="52dp"
-                android:gravity="right"
-                android:textColor="#F5F4F4"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#F7F7F7"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -46,8 +51,8 @@
             <View
                 android:id="@+id/view"
                 android:layout_width="wrap_content"
-                android:layout_height="1.5dp"
-                android:background="@color/cardview_dark_background"
+                android:layout_height="2.5dp"
+                android:background="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 

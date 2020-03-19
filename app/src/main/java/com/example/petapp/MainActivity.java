@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         /* Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
         when the user enters their search term */
-        searchTerms = Arrays.asList("Cat", "Dog", "Beagle", "Bulldog", "Golden Retriever", "Shiba Inu", "Dobermann", "Siamese", "Bengal", "Persian");
+        searchTerms = Arrays.asList("cat", "dog", "beagle", "bulldog", "golden retriever", "shiba inu", "dobermann", "siamese", "bengal", "persian");
 
         search_pet = findViewById(R.id.search_list);
 
@@ -102,22 +102,22 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(final String s) {
-                String search = s.toLowerCase();
+                String search = s.toLowerCase().trim();
                 Boolean toast = false;
                 for (String str: searchTerms) {
-                    if(str.trim().toLowerCase().contains(search)){
-                        toast = true;
+                    if(str.trim().toLowerCase().equals(search)){
+                        toast = false;
                         Intent intent = new Intent(MainActivity.this, PetList.class);
                         intent.putExtra("search_term", s);
                         startActivity(intent);
                         return false;
                     } else{
-                        if(toast == false){
-                            Toast.makeText(MainActivity.this, "Please check spelling or spaces", Toast.LENGTH_SHORT).show();
-                        }
+                        toast = true;
                     }
                 }
-                
+                if(toast == true){
+                    Toast.makeText(MainActivity.this, "Please check spelling", Toast.LENGTH_SHORT).show();
+                }
                 return false;
             }
 

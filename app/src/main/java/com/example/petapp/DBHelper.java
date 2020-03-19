@@ -65,7 +65,7 @@ public class DBHelper {
                 "Pedigree: Easy-to-open individual packets, ideal for a fresh healthy meal, on its own or on top of dry canine food\n" +
                         "Nutrition for dogs that helps support healthy bones, good digestion, a healthy skin & coat and strong natural defenses"));
         foods.add(new Food("Winalot Sunday Dinner ", "winalot", "Pets at Home", "Morrisons", "Sainsburys",
-                "Winalot: ade with succulent meaty chunks and quality ingredients.\n" +
+                "Winalot: Made with succulent meaty chunks and quality ingredients.\n" +
                         "It contains all the essential vitamins and minerals your dog needs to ensure every bowl of Winalot is 100% Complete and balanced."));
         foods.add(new Food("Cesar Tray Country Kitchen", "cesar", "Tesco", "Pets at Home", "Sainsburys",
                 "Cesar: Quality pet food made with carefully selected ingredients\n" +
