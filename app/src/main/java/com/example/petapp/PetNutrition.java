@@ -52,21 +52,24 @@ public class PetNutrition extends AppCompatActivity {
         TextView foodName3 = findViewById(R.id.food_name_3);
         TextView nutritionComments = findViewById(R.id.nutrition_comments);
 
-        int resourceId1 = this.getResources().getIdentifier(foods.get(0).getFoodImg(),"drawable","com.example.petapp");
-        int resourceId2 = this.getResources().getIdentifier(foods.get(1).getFoodImg(),"drawable","com.example.petapp");
-        int resourceId3 = this.getResources().getIdentifier(foods.get(2).getFoodImg(),"drawable","com.example.petapp");
-        foodImg1.setImageResource(resourceId1);
-        foodImg2.setImageResource(resourceId2);
-        foodImg3.setImageResource(resourceId3);
+        if(foods.size() != 0){
+            int resourceId1 = this.getResources().getIdentifier(foods.get(0).getFoodImg(),"drawable","com.example.petapp");
+            int resourceId2 = this.getResources().getIdentifier(foods.get(1).getFoodImg(),"drawable","com.example.petapp");
+            int resourceId3 = this.getResources().getIdentifier(foods.get(2).getFoodImg(),"drawable","com.example.petapp");
+            foodImg1.setImageResource(resourceId1);
+            foodImg2.setImageResource(resourceId2);
+            foodImg3.setImageResource(resourceId3);
 
-        foodName1.setText(foods.get(0).getFoodName());
-        foodName3.setText(foods.get(1).getFoodName());
-        foodName2.setText(foods.get(2).getFoodName());
+            foodName1.setText(foods.get(0).getFoodName());
+            foodName3.setText(foods.get(1).getFoodName());
+            foodName2.setText(foods.get(2).getFoodName());
 
-        String nutritionCommment = foods.get(0).getNutritionComment() + "\n\n" +
-                foods.get(1).getNutritionComment() + "\n\n" +
-                foods.get(2).getNutritionComment();
-        nutritionComments.setText(nutritionCommment);
+            String nutritionCommment = foods.get(0).getNutritionComment() + "\n\n" +
+                    foods.get(1).getNutritionComment() + "\n\n" +
+                    foods.get(2).getNutritionComment();
+            nutritionComments.setText(nutritionCommment);
+        }
+
 
 
         /* Creates list of imageviews and iterates over them adding the onclick along with the loop count

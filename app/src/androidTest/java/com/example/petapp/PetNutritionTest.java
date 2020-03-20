@@ -12,17 +12,16 @@ import org.junit.Test;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
-public class PetDetailsTest {
+//Tests if the pet nutrition activity can be reached.
+public class PetNutritionTest {
     @Rule
-    public ActivityTestRule<PetDetails> mActivityTestRule = new ActivityTestRule<PetDetails>(PetDetails.class);
+    public ActivityTestRule<PetNutrition> mActivityTestRule = new ActivityTestRule<PetNutrition>(PetNutrition.class);
 
-    private PetDetails mActivity = null;
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(PetNutrition.class.getName(), null, false);
+    private PetNutrition mActivity = null;
 
     @Before
     public void setUp() throws Exception {
@@ -31,15 +30,7 @@ public class PetDetailsTest {
 
     @Test
     public void testLaunch(){
-        assertNotNull(mActivity.findViewById(R.id.nutrition_btn));
-
-        onView(withId(R.id.nutrition_btn)).perform(scrollTo()).perform(click());
-
-        Activity petNutrition = getInstrumentation().waitForMonitorWithTimeout(monitor, 5000);
-
-        assertNotNull(petNutrition);
-
-        petNutrition.finish();
+        assertNotNull(mActivity.findViewById(R.id.food_img_1));
     }
 
     @After

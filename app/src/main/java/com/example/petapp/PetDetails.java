@@ -13,6 +13,10 @@ import android.widget.TextView;
 import java.util.List;
 
 public class PetDetails extends AppCompatActivity {
+    Button nutritionBtn;
+    Integer foodId1;
+    Integer foodId2;
+    Integer foodId3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,25 +51,28 @@ public class PetDetails extends AppCompatActivity {
         TextView careComment2 = findViewById(R.id.care_comment_2);
         TextView careComment3 = findViewById(R.id.care_comment_3);
 
-        int resourceId = this.getResources().getIdentifier(pet.get(0).getImgPath(),"drawable","com.example.petapp");
-        petImg.setImageResource(resourceId);
-        petName.setText(pet.get(0).getName());
-        petSpecies.setText(pet.get(0).getSpecies());
-        petAge.setText(pet.get(0).getAvgAge());
-        petWeight.setText(pet.get(0).getAvgWeight());
-        careComment1.setText(pet.get(0).getCareComment1());
-        careComment2.setText(pet.get(0).getCareComment2());
-        careComment3.setText(pet.get(0).getCareComment3());
+        if(pet.size() != 0){
+            int resourceId = this.getResources().getIdentifier(pet.get(0).getImgPath(),"drawable","com.example.petapp");
+            petImg.setImageResource(resourceId);
+            petName.setText(pet.get(0).getName());
+            petSpecies.setText(pet.get(0).getSpecies());
+            petAge.setText(pet.get(0).getAvgAge());
+            petWeight.setText(pet.get(0).getAvgWeight());
+            careComment1.setText(pet.get(0).getCareComment1());
+            careComment2.setText(pet.get(0).getCareComment2());
+            careComment3.setText(pet.get(0).getCareComment3());
 
-        final Integer foodId1 = pet.get(0).getFood1Id();
-        final Integer foodId2 = pet.get(0).getFood2Id();
-        final Integer foodId3 = pet.get(0).getFood3Id();
+            foodId1 = pet.get(0).getFood1Id();
+            foodId2 = pet.get(0).getFood2Id();
+            foodId3 = pet.get(0).getFood3Id();
+        }
+
 
         /**
          *  @author UP915469
          *  Sets the button in pet details screen to have an onclick moving user to nutrition screen, parsing in the food ids to search nutrition table for.
          */
-        Button nutritionBtn = findViewById(R.id.nutrition_btn);
+        nutritionBtn = findViewById(R.id.nutrition_btn);
 
         nutritionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
