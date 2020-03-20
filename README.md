@@ -15,5 +15,5 @@ Test plan is located in the doc-files folder under Test Plan.pdf
 
 Demo link:
 A video demo on how to this app is provided here: https://vimeo.com/398924070
-# An additional search feature demo video doesn't show is response to the user when they enter in a wrong pet name alerting them to check spelling.
+- An additional search feature demo video doesn't show is response to the user when they enter in a wrong pet name alerting them to check spelling.
 
