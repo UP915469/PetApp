@@ -119,11 +119,11 @@
             android:id="@+id/textView9"
             android:layout_width="413dp"
             android:layout_height="18dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:textAlignment="center"
             android:text="Care Advice"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 

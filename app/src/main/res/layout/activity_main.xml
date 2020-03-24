@@ -14,6 +14,7 @@
         android:layout_width="252dp"
         android:layout_height="257dp"
         android:layout_centerInParent="true"
+        android:contentDescription="@string/img_description"
         android:foregroundGravity="center" />
 
     <TextView
@@ -21,9 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
         android:layout_marginTop="525dp"
-        android:text="Click the search bar to begin! Use the suggestions to help you type"
+        android:gravity="center"
+        android:text="@string/Startup"
         android:textSize="20sp" />
 
     <ListView

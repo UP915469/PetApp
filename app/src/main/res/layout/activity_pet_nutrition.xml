@@ -7,7 +7,7 @@
     tools:context=".PetNutrition">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/food_img_1"
             android:layout_width="110dp"
@@ -51,7 +51,6 @@
             android:layout_marginTop="195dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:text="TextView"
             android:textColor="#F8F4F4"
             android:textSize="12sp" />
 
@@ -63,7 +62,6 @@
             android:layout_marginTop="195dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:text="TextView"
             android:textColor="#F8F4F4"
             android:textSize="12sp" />
 
@@ -75,7 +73,6 @@
             android:layout_marginTop="195dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:text="TextView"
             android:textColor="#F8F4F4"
             android:textSize="12sp" />
 
@@ -83,21 +80,20 @@
             android:id="@+id/textView4"
             android:layout_width="234dp"
             android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="300dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:layout_centerHorizontal="true"
-            android:text="Click a food image to see stores that sell it near you!"
+            android:text="@string/Click_Food"
             android:textColor="#F8F4F4" />
 
         <TextView
             android:id="@+id/nutrition_comments"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:minHeight="150dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="380dp"
-            android:text="TextView"
+            android:minHeight="150dp"
             android:textSize="12sp" />
     </RelativeLayout>
 </ScrollView>
