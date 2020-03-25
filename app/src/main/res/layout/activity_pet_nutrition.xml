@@ -8,46 +8,48 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/food_img_1"
             android:layout_width="110dp"
             android:layout_height="145dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/food_img"
             android:maxWidth="125dp"
             android:maxHeight="145dp"
             android:minWidth="125dp"
-            android:minHeight="145dp"
-            android:layout_marginTop="50dp"
-            android:contentDescription="@string/pet_img"/>
+            android:minHeight="145dp" />
 
         <ImageView
             android:id="@+id/food_img_2"
             android:layout_width="110dp"
             android:layout_height="145dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/food_img"
             android:maxWidth="125dp"
             android:maxHeight="145dp"
-            android:layout_marginLeft="140dp"
-            android:layout_marginTop="50dp"
             android:minWidth="125dp"
-            android:minHeight="145dp"/>
+            android:minHeight="145dp" />
 
         <ImageView
             android:id="@+id/food_img_3"
             android:layout_width="110dp"
             android:layout_height="145dp"
-            android:layout_marginLeft="270dp"
+            android:layout_marginLeft="280dp"
             android:layout_marginTop="50dp"
-            android:contentDescription="@string/pet_img"
+            android:contentDescription="@string/food_img"
             android:maxWidth="125dp"
             android:maxHeight="145dp"
             android:minWidth="125dp"
-            android:minHeight="145dp"/>
+            android:minHeight="145dp" />
 
         <TextView
             android:id="@+id/food_name_1"
             android:layout_width="110dp"
             android:layout_height="45dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="195dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
@@ -58,7 +60,7 @@
             android:id="@+id/food_name_2"
             android:layout_width="110dp"
             android:layout_height="45dp"
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="195dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
@@ -69,7 +71,7 @@
             android:id="@+id/food_name_3"
             android:layout_width="110dp"
             android:layout_height="45dp"
-            android:layout_marginLeft="270dp"
+            android:layout_marginLeft="280dp"
             android:layout_marginTop="195dp"
             android:background="@color/colorPrimary"
             android:gravity="center"
