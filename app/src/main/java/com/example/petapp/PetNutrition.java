@@ -61,8 +61,8 @@ public class PetNutrition extends AppCompatActivity {
             foodImg3.setImageResource(resourceId3);
 
             foodName1.setText(foods.get(0).getFoodName());
-            foodName3.setText(foods.get(1).getFoodName());
-            foodName2.setText(foods.get(2).getFoodName());
+            foodName2.setText(foods.get(1).getFoodName());
+            foodName3.setText(foods.get(2).getFoodName());
 
             String nutritionCommment = foods.get(0).getNutritionComment() + "\n\n" +
                     foods.get(1).getNutritionComment() + "\n\n" +
