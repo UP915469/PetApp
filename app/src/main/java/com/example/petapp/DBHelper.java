@@ -67,6 +67,14 @@ public class DBHelper {
                 "If you’re careful to mind his special needs, the Pug is an easy-care pet. His short coat sheds, but his grooming needs are modest. He doesn’t need a great deal of exercise — nor can he tolerate it — but it’s important to keep him lean, fit, and mentally challenged, especially when he’s young. Because of his great love for people, care should be taken to accustom your Pug to being alone so he doesn’t develop excessive anxiety when left behind.",
                 "Grooming a Pug’s coat is easy. Brush his smooth double coat weekly with a rubber curry brush to remove dead hair. And you will remove lots of it, because Pugs shed. A lot. They shed year-round, so it’s something you should expect to live with.",
                 1, 2, 3));
+        pets.add(new Pet("Ball Python", "Snake", "bull_python", "25-30 years", "4-5 pounds", "A well-balanced ball python diet consists of appropriately sized frozen rodents, thawed/warmed to above room temperature.Feed juveniles once a week, adults every one to two weeks.",
+                "Habitat maintenance, Thoroughly clean and disinfect the habitat at least once a week: place snake in a secure habitat; scrub the tank and furnishings with a 3% bleach solution; rinse thoroughly with water, removing all traces of bleach smell; dry the tank and furnishings completely and add clean substrate.",
+                "Grooming & hygiene, Snakes will regularly shed their skin; ensure humidity of habitat is at appropriate level to allow snake to shed properly.Never try to remove eye caps by yourself. Seek veterinary care.",
+                8, 9, 10));
+        pets.add(new Pet("Crested Gecko", "Gecko", "crested_gecko", "15-20 years", "40-60 grams", "Crested geckos are originally from New Caledonia (a group of islands between Fiji and Australia). Crested geckos are ideal reptile pets for beginners, with simple, easy- to-meet requirements. Because crested geckos are primarily tree dwellers, they make outstanding displays in naturalistic vivariums.",
+                "Baby crested geckos are best housed in large plastic terrariums or in standard (20-inch) 10-gallon reptile tanks with a screen top. An adult crested gecko should be housed in a 20-gallon tank with screen top. Larger tanks will allow for better displays. In areas with moderate to high relative humidity, crested geckos will fare well in screen cages. These tanks have the advantage of being light and easy to clean. You can keep one male and several female crested geckos together. Male crested geckos may fight, particularly when in the company of females, and should not be kept together.",
+                "Water should always be available for crested geckos in a shallow water dish. These geckos also require a relative humidity of at least 50 percent and preferably 70 percent. In dry areas the tanks should be lightly misted nightly or a cool air humidifier placed in the room. Inexpensive hygrometers (relative humidity gauges) for use with reptiles are now readily available in the pet trade.",
+                11, 12, 13));
         return pets;
     }
 
@@ -92,7 +100,22 @@ public class DBHelper {
                 "Felix: 100% of your cat's daily needs, Irresistible meals for mischief makers, Vitamins D & E, Balanced minerals, Source of omega 6"));
         foods.add(new Food("Gourmet Mon Petit Fish", "gourmet", "Pets at Home", "Morrisons", "Sainsburys",
                 "Gourmet: 100% complete and balanced nutritional pet food for adult cats (aged 1 to 7), Packed with essential vitamins and minerals to keep your adult cat healthy"));
-
+        foods.add(new Food("Small frozen mice", "small_mice", "Pets at Home", "Online retailer", "Indipendent store",
+                "Protein 16%, Fat 6-7%"));
+        foods.add(new Food("Regular frozen mice", "small_mice", "Pets at Home", "Online retailer", "Indipendent store",
+                "Protein 20%, Fat 4-8%"));
+        foods.add(new Food("Mouse Pinks", "mouse_pinks", "Pets at Home", "Online retailer", "Indipendent store",
+                "Protein 12%, Fat 27%"));
+        foods.add(new Food("Brown Crickets", "brn_crickets", "Pets at Home", "Online retailer", "Indipendent store",
+                "These big, meaty live brown crickets for reptile food are produced fresh on our Somerset based farm and are essential to ensure a staple diet for many reptiles. Very popular food for various Lizards including bearded dragons, Leopard Geckos, Frogs and Water dragons. By choosing to feed your reptile livefoods such as these crickets you will be promoting a natural hunting, stalking and waiting behaviour from your reptile which keeps him/her active and occupied and is more what they would be accustomed to in the wild."));
+        foods.add(new Food("Repashy Superfoods Crested Gecko Diet", "cgd", "Pets at Home", "Online retailer", "Indipendent store",
+                "Complete Diet"));
+        foods.add(new Food("Waxworms", "waxworms", "Pets at Home", "Online retailer", "Indipendent store",
+                "Moisture - 59.8%\n" +
+                        "Fat - 15.2%\n" +
+                        "Calcium - 0.02%\n" +
+                        "Protein - 19.5%\n" +
+                        "Calcium/Phosphorus Ratio - 0.10%"));
         return foods;
     }
 

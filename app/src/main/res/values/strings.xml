@@ -27,9 +27,13 @@
         <item>Siamese</item>
         <item>Shiba Inu</item>
         <item>Golden Retriever</item>
+        <item>Ball Python</item>
+        <item>Crested Gecko</item>
         <item>Pug</item>
         <item>Dog</item>
         <item>Cat</item>
+        <item>Snake</item>
+        <item>Gecko</item>
     </string-array>
     <!--Content Descriptions-->
     <string name="img_description">Image of planet earth surrounded by pets</string>

@@ -130,20 +130,6 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
         <TextView
-            android:id="@+id/textView13"
-            android:layout_width="409dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            android:text="@string/click_food2"
-            android:textAlignment="center"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-        <TextView
             android:id="@+id/care_comment_1"
             android:layout_width="345dp"
             android:layout_height="wrap_content"
@@ -182,11 +168,12 @@
             android:id="@+id/nutrition_btn"
             android:layout_width="107dp"
             android:layout_height="46dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button"
             android:text="@string/nutrition_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+            app:layout_constraintTop_toBottomOf="@+id/care_comment_3" />
 
         <ImageView
             android:id="@+id/imageView"
