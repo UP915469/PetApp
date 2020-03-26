@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 /**
- *  @author UP915469
  *  Adapter used to manage the pet lists functionatility.
+ *  @author UP915469
  * @see com.example.petapp.PetList for information on how this adapter is used.
  */
 class PetAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<PetAdapter.ViewHolder> {

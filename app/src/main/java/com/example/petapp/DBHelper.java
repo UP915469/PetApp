@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author UP915469
  * Class meant to be called and that helps intialise the db by returning an array of pets and foods.
  * The arraylists returned can be used by the parent class by calling the db insert all function on said arraylists
+ * @author UP915469
  */
-
 public class DBHelper {
     List<Pet> pets = new ArrayList<>();
     List<Food> foods = new ArrayList<>();

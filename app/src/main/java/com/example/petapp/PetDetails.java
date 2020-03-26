@@ -27,8 +27,8 @@ public class PetDetails extends AppCompatActivity {
         Intent mIntent = getIntent();
 
         /**
-         * @author UP915469
          * Gets the id parsed into this screen from previous MainActivity/PetList screens and uses that id to search for a specific pet from the db.
+         * @author UP915469
          */
         int petId = mIntent.getIntExtra("pet_id", 0);
 
@@ -41,8 +41,9 @@ public class PetDetails extends AppCompatActivity {
 
 
         /**
+         * Sets the image and text views in the pet details screen to equal the content returned from accesing that specific queried pets get methods.
          *  @author UP915469
-         * Sets the image and text views in the pet details screen to equal the content returned from accesing that specific queried pets get methods. */
+         */
         ImageView petImg = findViewById(R.id.pet_img);
         TextView petName = findViewById(R.id.pet_name);
         TextView petSpecies = findViewById(R.id.pet_species);
@@ -70,8 +71,8 @@ public class PetDetails extends AppCompatActivity {
 
 
         /**
-         *  @author UP915469
          *  Sets the button in pet details screen to have an onclick moving user to nutrition screen, parsing in the food ids to search nutrition table for.
+         *  @author UP915469
          */
         nutritionBtn = findViewById(R.id.nutrition_btn);
 

@@ -8,10 +8,10 @@ import androidx.room.Query;
 import java.util.List;
 
 /**
- * @author UP915469
  * Contains the queries used to search the database or methods to be used on the database.
  * Queries are converted to functions to be called on lists of that items class.
  * Follows Room db notation.
+ * @author UP915469
  */
 @Dao
 public interface PetDao {

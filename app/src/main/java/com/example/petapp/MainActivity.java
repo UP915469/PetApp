@@ -34,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /**
-         *  @author UP915469
          *  Initialises db for user if its not already by checking if the db contains anything and if not inserting into it using the dbhelper class
-         *  @see com.example.petapp.DBHelper for information how this class works*/
+         *  @see com.example.petapp.DBHelper for information how this class works
+         *  @author UP915469
+         */
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "pet-app").allowMainThreadQueries().fallbackToDestructiveMigration().build();
 
@@ -58,19 +59,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         /**
-         *  @author UP915469
          *  Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
-         *  when the user enters their search term */
+         *  when the user enters their search term
+         *  @author UP915469
+         */
         searchTerms = Arrays.asList("cat", "dog", "snake", "gecko", "beagle", "bulldog", "golden retriever", "shiba inu", "dobermann", "siamese", "bengal", "persian", "pug", "cocker spaniel", "ball python",
                 "crested gecko");
 
         search_pet = findViewById(R.id.search_list);
 
         /**
-         *  @author UP915469
          *  Creates an array that takes and adds items from the my_pets items in res/strings.xml,
          *  sets the adapter to use the listview provided in the layout file for main activity using the created array of items
-         *  which are pet names/species */
+         *  which are pet names/species
+         *  @author UP915469
+         */
         ArrayList<String> arrayPets = new ArrayList<>();
         arrayPets.addAll(Arrays.asList(getResources().getStringArray(R.array.my_pets)));
 
@@ -86,10 +89,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * @author UP915469
      *  Creates the search action, parsing through the created menu file in res/menu giving context to where it will be displayed.
      *  Creates the onQueryListener which handles how user interaction via searching dictates will affect which pet names/species
-     *  will be shown in the list as they search, assigning a filter for the text users enter. */
+     *  will be shown in the list as they search, assigning a filter for the text users enter.
+     * @author UP915469
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();

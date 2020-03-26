@@ -63,8 +63,8 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
         getSupportActionBar().hide();
 
         /**
+         * gets the store names parsed from nutrition screen to call latLng function with.
          * @author UP91469
-         * gets the store names parsed from nutrition screen to call latLng function with
          */
         Intent mIntent = getIntent();
         store1 = mIntent.getStringExtra("store_1");
@@ -142,10 +142,10 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     /**
-     * @author UP91469
      * Function that gets users current location for use by the map
      * Requests user give permission for location before use and notifies them to turn on location if it isn't already.
      * Update maps camera to the location using the zoom variable created.
+     * @author UP91469
      */
     private void getDeviceLocation() {
         mfusedLocationProviderClient.getLastLocation()
