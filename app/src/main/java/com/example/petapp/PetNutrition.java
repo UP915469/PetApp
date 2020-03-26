@@ -31,7 +31,6 @@ public class PetNutrition extends AppCompatActivity {
          * @author UP915469
          * Gets food id parsed to this activity from PetDetails screen, uses those to query db for correct food items.
          */
-
         Intent mIntent = getIntent();
 
         int foodId1 =  mIntent.getIntExtra("foodId1", 0);
@@ -73,8 +72,11 @@ public class PetNutrition extends AppCompatActivity {
 
 
 
-        /* Creates list of imageviews and iterates over them adding the onclick along with the loop count
-        so it can get the correct num to use with the get function. Then creates the store locator intent parsing in the stores from that */
+        /**
+         * @author UP915469
+         *  Creates list of imageviews and iterates over them adding the onclick along with the loop count
+         * so it can get the correct num to use with the get function. Then creates the store locator intent parsing in the stores from that
+         */
         ImageView[] imgViews = {foodImg1, foodImg2, foodImg3};
 
         for (int i = 0; i < imgViews.length; i++) {
@@ -98,6 +100,12 @@ public class PetNutrition extends AppCompatActivity {
         }
     }
 
+    /**
+     * @author UP915469
+     * Method that requests user to give location permission needed for store locator.
+     * @param requestCode request code to initialize for the switch case
+     * @param grantResults returns result of user granting/denying permission
+     */
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case 1: {
