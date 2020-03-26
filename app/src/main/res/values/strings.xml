@@ -2,21 +2,40 @@
     <string name="app_name">PetApp</string>
 
     <string name="pet_img">Pet Img</string>
+    <string name="food_img">Food Img</string>
     <string name="pet_name">Pet Name</string>
     <string name="care_tips">Care Tips</string>
     <string name="String">Pet list</string>
     <string name="search_title">Search for Pet</string>
     <string name="String_animalSearchBox">Search for animal or species...</string>
+    <string name="Startup">Click the search icon to begin! Use the suggestions to help you type</string>
+    <string name="Click_Food">Click a food image to see stores that sell it near you!</string>
+    <string name="click_food2">Click this button to see recommended food for this pet</string>
+    <string name="nutrition_button">nutrition</string>
+    <string name="name">Name:</string>
+    <string name="species">Species:</string>
+    <string name="age">Age span:</string>
+    <string name="weight">weight:</string>
+    <string name="care_advice"><u>Care Advise</u></string>
     <string-array name="my_pets">
         <item>Beagle</item>
         <item>Bulldog</item>
         <item>Bengal</item>
         <item>Persian</item>
         <item>Dobermann</item>
+        <item>Cocker Spaniel</item>
         <item>Siamese</item>
         <item>Shiba Inu</item>
         <item>Golden Retriever</item>
+        <item>Ball Python</item>
+        <item>Crested Gecko</item>
+        <item>Pug</item>
         <item>Dog</item>
         <item>Cat</item>
+        <item>Snake</item>
+        <item>Gecko</item>
     </string-array>
+    <!--Content Descriptions-->
+    <string name="img_description">Image of planet earth surrounded by pets</string>
+    <string name="line">Line</string>
 </resources>

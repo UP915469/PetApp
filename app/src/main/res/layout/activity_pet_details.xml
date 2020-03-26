@@ -14,8 +14,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="414dp"
-            android:layout_height="137dp"
+            android:layout_width="415dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -27,16 +28,17 @@
                     android:id="@+id/textView2"
                     android:layout_width="58dp"
                     android:layout_height="34dp"
-                    android:layout_marginTop="1dp"
-                    android:text="Weight"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/weight"
                     android:textSize="13sp"
-                    app:layout_constraintStart_toEndOf="@+id/pet_img"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pet_img" />
 
                 <ImageView
                     android:id="@+id/pet_img"
                     android:layout_width="160dp"
                     android:layout_height="137dp"
+                    android:contentDescription="@string/pet_img"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +49,6 @@
                     android:layout_height="34dp"
                     android:layout_marginEnd="52dp"
                     android:layout_marginRight="52dp"
-                    android:text="TextView"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/pet_name" />
@@ -58,7 +59,6 @@
                     android:layout_height="34dp"
                     android:layout_marginEnd="52dp"
                     android:layout_marginRight="52dp"
-                    android:text="TextView"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/pet_species" />
@@ -69,18 +69,18 @@
                     android:layout_height="34dp"
                     android:layout_marginEnd="52dp"
                     android:layout_marginRight="52dp"
-                    android:text="TextView"
+                    android:layout_marginBottom="5dp"
                     android:textSize="13sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pet_age" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
                     android:id="@+id/pet_name"
                     android:layout_width="142dp"
                     android:layout_height="34dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="52dp"
                     android:layout_marginRight="52dp"
-                    android:text="TextView"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -89,7 +89,8 @@
                     android:id="@+id/textView7"
                     android:layout_width="58dp"
                     android:layout_height="34dp"
-                    android:text="Name"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/name"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@+id/pet_img"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -98,7 +99,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="58dp"
                     android:layout_height="34dp"
-                    android:text="Species"
+                    android:text="@string/species"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@+id/pet_img"
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -107,7 +108,7 @@
                     android:id="@+id/textView"
                     android:layout_width="58dp"
                     android:layout_height="34dp"
-                    android:text="Age span"
+                    android:text="@string/age"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@+id/pet_img"
                     app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -119,27 +120,14 @@
             android:id="@+id/textView9"
             android:layout_width="413dp"
             android:layout_height="18dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/care_advice"
             android:textAlignment="center"
-            android:text="Care Advice"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="409dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            android:text="Click this button to see recommended food for this pet"
-            android:textAlignment="center"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/care_comment_1"
@@ -147,7 +135,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:minHeight="100dp"
-            android:text="TextView"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.526"
@@ -160,7 +147,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="100dp"
-            android:text="TextView"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +158,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:minHeight="100dp"
-            android:text="TextView"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.53"
@@ -183,17 +168,19 @@
             android:id="@+id/nutrition_btn"
             android:layout_width="107dp"
             android:layout_height="46dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button"
-            android:text="Nutrition"
+            android:text="@string/nutrition_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+            app:layout_constraintTop_toBottomOf="@+id/care_comment_3" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="345dp"
             android:layout_height="2.5dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.53"
             app:layout_constraintStart_toStartOf="parent"
@@ -205,6 +192,7 @@
             android:layout_width="345dp"
             android:layout_height="2.5dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/care_comment_1"
@@ -215,6 +203,7 @@
             android:layout_width="345dp"
             android:layout_height="2.5dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.53"
             app:layout_constraintStart_toStartOf="parent"

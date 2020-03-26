@@ -60,6 +60,7 @@ public class StoreLocator extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_locator);
+        getSupportActionBar().hide();
 
         /**
          * @author UP91469

@@ -20,6 +20,7 @@ public class PetList extends AppCompatActivity implements PetAdapter.OnSelectLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_list);
+        getSupportActionBar().hide();
 
         Intent mIntent = getIntent();
         String searchTerm = mIntent.getStringExtra("search_term");

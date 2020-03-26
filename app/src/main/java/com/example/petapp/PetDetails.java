@@ -22,6 +22,7 @@ public class PetDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_details);
+        getSupportActionBar().hide();
 
         Intent mIntent = getIntent();
 

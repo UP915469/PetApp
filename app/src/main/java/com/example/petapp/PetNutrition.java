@@ -25,6 +25,7 @@ public class PetNutrition extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_nutrition);
+        getSupportActionBar().hide();
 
         /**
          * @author UP915469

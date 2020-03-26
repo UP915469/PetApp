@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
          *  @author UP915469
          *  Adds names and species to the respecitive arrays so they can be queried by onSearchInput method
          *  when the user enters their search term */
-        searchTerms = Arrays.asList("cat", "dog", "beagle", "bulldog", "golden retriever", "shiba inu", "dobermann", "siamese", "bengal", "persian");
+        searchTerms = Arrays.asList("cat", "dog", "snake", "gecko", "beagle", "bulldog", "golden retriever", "shiba inu", "dobermann", "siamese", "bengal", "persian", "pug", "cocker spaniel", "ball python",
+                "crested gecko");
 
         search_pet = findViewById(R.id.search_list);
 
